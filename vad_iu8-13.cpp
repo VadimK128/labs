@@ -26,7 +26,26 @@ int _tmain(int argc, _TCHAR* argv[])
 		y = 3*x*x*x + 4*x*x - 11*x + 1;
 		std::cout<<"x="<<x<<"\n"<<"y="<<y<<"\n"; //4
 
-	
+	double V, m, ro;
+		std::cout<<"Enter body volume:";
+		std::cin>>V;
+		std::cout<<"OK, now enter body mass:";
+		std::cin>>m;
+		ro = m/V;
+		std::cout<<"Density is:"<<ro<<"\n"; //(1)
+
+	double x2, a2, b2;
+		std::cout<<"Enter a!=0, b:";
+		std::cin>>a2>>b2;
+		if (a2 == 0){
+			std::cout<<"'A' should not be equal to 0";
+			std::cin>>a2;
+		}
+		else{
+			x2 = -b2/a2;
+			std::cout<<"Density is:"<<ro<<"\n";
+		}
+
 	system("pause");
 	return 0;
 }
